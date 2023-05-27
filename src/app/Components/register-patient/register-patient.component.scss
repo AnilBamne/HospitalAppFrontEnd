@@ -1,0 +1,24 @@
+
+.main-container{
+   
+}
+// .form-content{
+//     border-style:double;
+//     padding: 20px;
+// }
+.inline-content{
+    display: inline-block;
+    width: 20vw;
+}
+::ng-deep .mat-form-field-wrapper {
+    padding-bottom: 5px; 
+   // margin: 10px;
+}
+mat-form-field{
+   width: 40vw;
+}
+
+.bottom-btn{
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,38 @@
+.card-content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: auto;
+    height:auto ;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+// img{
+//     width: 14vw;
+//     height: 22vh;
+// }
+.card-title,.card-body{
+    align-items: center;
+}
+.card-body{
+        display: flex;
+    flex-direction: column;
+}
+
+.btn{
+    background-color: rgb(97, 186, 244);
+    font-size: 12px;
+    width: 120px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

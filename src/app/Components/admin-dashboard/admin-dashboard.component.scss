@@ -1,0 +1,95 @@
+img{
+    width: 100%;
+    height: 88.5vh;
+    overflow:auto;
+   // opacity: 0.8;
+}
+
+.toolbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white(143, 229, 254);
+}
+.left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.right{
+    display: flex;
+    flex-direction: row;
+}
+.logo{
+    width: 90px;
+    height: 70px;
+    background: white;
+}
+.btn{
+    padding: 20px;
+}
+.logout{
+    margin-left: 140px;
+
+}
+.btn :hover{
+    background: rgb(138, 210, 210);
+    cursor: pointer;
+}
+.signup-menu{
+display: flex;
+flex-direction: column;
+}
+// .body-content{
+//     background-image: url(../../../assets/HOSPITAL.jpg);
+    
+// }
+.search-box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 500px;
+    height: 40px;
+    padding: 0px;
+    background-color: rgb(250, 255, 255);
+    // border: 1px solid gray;
+    border-radius: 16px;
+}
+.search-input{
+    border: none;
+    //background-color: rgb(187, 175, 175);
+    background: transparent;
+    outline: none;
+    border: 0px ;
+    width: 470px;
+    height: 38px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    margin-left: 20px;
+}
+.search-img{
+    width: 40px;
+    height: 30px;
+}
+.clear-btn{
+    border: none;
+    outline: none;
+    background:transparent;
+}
+.side-content{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: transparent;
+}
+::ng-deep .mat-list-item-content{
+    width: 140px;
+}
+// ::ng-deep .mat-list-item-content{
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-start;
+//     align-items: center;
+//     margin-left: 40px;
+// }

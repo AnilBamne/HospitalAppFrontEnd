@@ -1,0 +1,55 @@
+.layout{
+    background-color: transparent;
+}
+
+.docname{
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+.form-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 22vw;
+}
+.doc-name{
+    width: 20vw;
+    // border: 1px solid gray;
+}
+.name{
+    margin-left: 14px;
+    color: blue;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+// mat-form-field{
+//     //width: 22vw;
+// }
+
+ ::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
+    display: flex;
+    width: 20vw;
+}
+// ::ng-deep.mat-form-field-wrapper {
+//     padding-bottom: 0em; 
+// }
+
+.book-btn{
+    align-self: center;
+}
+h1{
+    font-size: 24px;
+    font-weight: 300;
+    margin: 0px;
+    // // font-family:Arial, Helvetica, sans-serif;
+    // font-family: 'Poppins';
+    font-family: 'Heebo';
+    
+
+}

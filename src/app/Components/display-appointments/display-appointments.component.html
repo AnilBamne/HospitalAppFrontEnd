@@ -1,0 +1,44 @@
+<div class="layout" fxLayoutAlign="center center" fxFlexFill>
+    <div fxFlex="80">
+      <!-- <h1>appointments</h1> -->
+        <table>
+          <thead>
+            <tr>
+              <th>Profile Pic</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Date</th>
+              <th>Visit Time</th>
+              <th>End Time</th>
+              <th>Number</th>
+              <th>Doctor</th>
+              <th>Desies</th>
+              
+              <!-- <th>IsTrash</th> -->
+              <th>Action</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let data of appointmentList | appointmentfilter:filtertext">
+              <td><mat-icon >persone</mat-icon></td>
+              <td>{{data.patientName}}</td>
+              <td>{{data.patientEmail}}</td>
+              <td>{{data.date | date: 'dd'}}/{{data.date | date:'MM'}}/{{data.date | date: 'yyyy'}}</td>
+              <td>{{(data.time).hours}}:{{(data.time).minutes}}</td>
+              <td>{{(data.endTime).hours}}:{{(data.endTime).minutes}}</td>
+              <td>{{data.number}}</td>
+              <td>Dr.{{data.doctorName}}</td>
+              <td>{{data.desies}}</td>
+              <!-- <td>{{data.isTrash}}</td> -->
+              <td >
+                <button mat-button title="Edit" class="btn edit-btn"><mat-icon fontIcon="edit" (click)="Edit(data)">edit</mat-icon></button>
+                <button mat-button title="Delete" class="btn delete-btn" ><mat-icon fontIcon="delete" (click)="Delete(data.appointmentId)">delete</mat-icon></button>
+              </td>
+
+            </tr>
+          </tbody>
+          
+        </table>
+    </div>
+  </div>

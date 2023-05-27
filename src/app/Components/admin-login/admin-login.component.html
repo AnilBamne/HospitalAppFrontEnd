@@ -1,0 +1,41 @@
+<div fxLayoutAlign="center center" fxFlexFill class="layout">
+    <mat-card fxFlex="34">
+        <div style="display: flex;flex-direction: column; align-items: center;">
+            <div>
+                <h2>Welcome To WeCare</h2>
+                <p class="text">Login to access your account</p>
+            </div>
+            <form [formGroup]="loginform" (ngSubmit)="OnSubmit()" class="form-content">
+                <div class="email-field">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                    <input matInput placeholder="EmailId" formControlName="email">
+                    <mat-error *ngIf="loginform.get('email')?.hasError('required')">Email is required</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="pass-field">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput type="password" placeholder="Password" [type]="showPassword? 'password':'text'" formControlName="password">
+                        <mat-error *ngIf="loginform.get('password')?.hasError('required')">Password is required</mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <section>
+                        <mat-checkbox (click)="ShowPass()">ShowPassword</mat-checkbox>
+                    </section>
+                </div>
+                <div class="login-btn btn">
+                    <button mat-button type="submit">LogIn</button>
+                </div>
+                <div class="forgot btn">
+                    <a mat-button >Forgot Password</a>
+                </div>
+                <div class="signup-content">
+                    <section>Don't have a account ?</section>
+                    <a mat-button class="signup btn" (click)="Register()">SignUp</a>
+                </div>
+            </form>
+        </div>
+    </mat-card>
+</div>

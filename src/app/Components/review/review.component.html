@@ -1,0 +1,30 @@
+<div>
+    <mat-toolbar >
+        <mat-toolbar-row class="toolbar">
+            <div class="menu-content">
+                <div class="menu" (click)="sidenav.toggle();"><mat-icon >menu</mat-icon></div>
+            </div>
+            <div class="h1">
+                <h1>Quandle</h1>
+            </div>
+            <div class="search-box">
+                <!-- <p>Demo</p> -->
+                <input mat-input placeholder="search" class="input">
+            </div>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    
+    <mat-sidenav-container>
+        <mat-sidenav #sidenav opened="true" mode="side">
+            <mat-sidenav>
+                <mat-nav-list>
+                    <a>Item 1</a>
+                    <a>Item 2</a>
+                </mat-nav-list>
+            </mat-sidenav>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

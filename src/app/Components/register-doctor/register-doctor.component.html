@@ -1,0 +1,58 @@
+<div fxLayoutAlign="center center" fxFlexFill>
+    <mat-card fxFlex="44">
+       <div style="display: flex;flex-direction: column; align-items: center;">
+            <div>
+                <h2>Welcome To WeCare</h2>
+                <p class="text">Register As Doctor</p>
+            </div>
+            <form class="reg-form" [formGroup]="RegisterDocForm" (ngSubmit)="OnSubmit()" class="form-content">
+            
+                <div>
+                    <mat-form-field class="mat-form-field" appearance="outline"  >
+                        <mat-label class="label">Name</mat-label>
+                        <input matInput type="name" placeholder="Name" formControlName="doctorName">
+                        <mat-error *ngIf="RegisterDocForm.get('doctorName')?.hasError('required')">Name is required</mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Gender</mat-label>
+                        <input matInput type="gender" placeholder="Gender" formControlName="doctorGender">
+                        <mat-error *ngIf="RegisterDocForm.get('doctorGender')?.hasError('required')">Gender is required</mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Specialization</mat-label>
+                        <input matInput type="Specialization" placeholder="Specialization" formControlName="doctorSpecialization">
+                        <mat-error *ngIf="RegisterDocForm.get('doctorSpecialization')?.hasError('required')">Specialization is required</mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Number</mat-label>
+                        <input matInput  placeholder="Number" formControlName="doctorNumber">
+                        <mat-error *ngIf="RegisterDocForm.get('doctorNumber')?.hasError('required')">Number is required</mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput type="email" placeholder="Email" formControlName="doctorEmail">
+                        <mat-error *ngIf="RegisterDocForm.get('doctorEmail')?.hasError('required')">Email is required</mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput  placeholder="Password" formControlName="doctorPassword">
+                        <mat-error *ngIf="RegisterDocForm.get('doctorPassword')?.hasError('required')">Password is required</mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <button mat-raised-button type="submit" color="primary">Register</button>
+                </div>
+            </form>
+       </div>
+    </mat-card>
+</div>

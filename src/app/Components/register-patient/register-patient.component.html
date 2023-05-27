@@ -1,0 +1,86 @@
+<div fxLayoutAlign="center center" fxFlexFill>
+    <mat-card fxFlex="44" class="main-container">
+        <div style="display: flex;flex-direction: column; align-items: center;">
+            <div>
+                <div>
+                    <h2>Welcome To WeCare</h2>
+                    <p >Register As Patient</p>
+                </div>
+            </div>
+            <form [formGroup]="registerorm" (ngSubmit)="OnSubmit()" class="reg-form" class="form-content">
+               
+                <div >
+                    <div class="inline-content" >
+                        <mat-form-field class="mat-form-field" appearance="outline" style="width: 19vw;" >
+                            <mat-label class="label">First Name</mat-label>
+                            <input matInput type="name" placeholder="FirstName" formControlName="firstName">
+                            <!-- <mat-error *ngIf="RegisterDocForm.get('doctorName')?.hasError('required')">First name is required</mat-error> -->
+                        </mat-form-field>
+                    </div>
+                    <div class="inline-content" >
+                        <mat-form-field class="mat-form-field" appearance="outline" style="width: 20vw;" >
+                            <mat-label class="label">Last Name</mat-label>
+                            <input matInput placeholder="LastName" formControlName="lastName">
+                            <!-- <mat-error *ngIf="RegisterDocForm.get('doctorName')?.hasError('required')">First name is required</mat-error> -->
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput type="email" placeholder="Email" formControlName="email">
+                        <!-- <mat-error *ngIf="RegisterDocForm.get('doctorEmail')?.hasError('required')">First name is required</mat-error> -->
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput  placeholder="Password" formControlName="password">
+                        <!-- <mat-error *ngIf="RegisterDocForm.get('doctorPassword')?.hasError('required')">First name is required</mat-error> -->
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Gender</mat-label>
+                        <input matInput type="gender" placeholder="Gender" formControlName="gender">
+                        <!-- <mat-error *ngIf="RegisterDocForm.get('doctorGender')?.hasError('required')">First name is required</mat-error> -->
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Address</mat-label>
+                        <input matInput placeholder="Address" formControlName="address">
+                        <!-- <mat-error *ngIf="RegisterDocForm.get('doctorSpecialization')?.hasError('required')">First name is required</mat-error> -->
+                    </mat-form-field>
+                </div>
+                <div>
+                    <div class="inline-content" >
+                        <mat-form-field appearance="outline" style="width: 19vw;">
+                            <mat-label>City</mat-label>
+                            <input matInput  placeholder="City" formControlName="city">
+                            <!-- <mat-error *ngIf="RegisterDocForm.get('doctorNumber')?.hasError('required')">First name is required</mat-error> -->
+                        </mat-form-field>
+                    </div>
+                    <div class="inline-content">
+                        <mat-form-field appearance="outline" style="width: 20vw;">
+                            <mat-label>State</mat-label>
+                            <input matInput  placeholder="State" formControlName="state">
+                            <!-- <mat-error *ngIf="RegisterDocForm.get('doctorNumber')?.hasError('required')">First name is required</mat-error> -->
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Desies/Issue</mat-label>
+                        <input matInput  placeholder="Desies" formControlName="desies">
+                        <!-- <mat-error *ngIf="RegisterDocForm.get('doctorNumber')?.hasError('required')">First name is required</mat-error> -->
+                    </mat-form-field>
+                </div>
+                <div class="bottom-btn">
+                    <button mat-raised-button type="submit" color="primary">Register</button>
+                    <a raised href="/registerDoc" style="margin-right: 100px;">Register As Doctor</a>
+                </div>
+            </form>
+        </div>
+    </mat-card>
+</div>

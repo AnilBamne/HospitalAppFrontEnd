@@ -1,0 +1,16 @@
+.reg-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form-content{
+    // border-style:double;
+    // padding: 10px;
+}
+::ng-deep .mat-form-field-wrapper {
+     padding-bottom: 5px; 
+}
+mat-form-field{
+    width: 40vw;
+}

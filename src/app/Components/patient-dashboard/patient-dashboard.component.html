@@ -1,0 +1,50 @@
+<div class="layout">
+    <div>
+        <mat-toolbar>
+            <mat-toolbar-row class="toolbar">
+                <button mat-icon-button>
+                    <mat-icon (click)="sidenav.toggle();">menu
+                    <!-- <img src="../../../assets/menu_black_24dp.svg">  -->
+                    </mat-icon>
+                </button>
+                <div class="left">
+                    <div><img src="../../../assets/hospital-logo-design-vector-medical-cross_53876-136743.avif" class="logo"></div>
+                    <h1>WeCare</h1>
+                    <div class="btn">
+                        <button mat-button >Services</button>
+                    </div>
+                    <div class="btn">
+                        <button mat-button>About Us</button>
+                    </div>
+                </div>
+                <div class="search-box">
+                    <img class="search-img" src="../../../assets/Icons/search_black_24dp.svg">
+                    <input class="search-input" placeholder="Search" [(ngModel)]="text" (keyup)="Search($event)"> 
+                    <button mat-button class="clear-btn" (click)="Clear()"><img  class="search-img" src="../../../assets/Icons/clear_black_24dp.svg"></button>
+                </div>
+                <div class="right">
+                    <div class="logout btn">
+                        <!-- <button mat-button>LogIn</button> -->
+                        <button mat-button (click)="logOut()" >LogOut</button>
+                    </div>
+                    
+                </div>
+            </mat-toolbar-row>
+        </mat-toolbar>
+        <mat-sidenav-container>
+            <mat-sidenav #sidenav opened="true" mode="side" >
+                <mat-nav-list>
+                    <!-- <button> <img class="list-icons" src="../../../assets/lightbulb_black_24dp.svg" >Notes</button> -->
+                    <a mat-list-item routerLink="./getdoctors" class="icons">Doctors</a>
+                    <a mat-list-item routerLink="./#" class="icons">Medication</a>
+                </mat-nav-list>
+            </mat-sidenav>
+            <mat-sidenav-content >
+                <div class="side-content"> 
+                    <router-outlet> </router-outlet>
+                </div>
+            </mat-sidenav-content>
+       </mat-sidenav-container>
+        
+    </div>
+</div>
